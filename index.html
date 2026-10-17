@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOSJIS STORE — BASRENG RENYAH ,GURIH,ENAK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+ 
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">
+        <img src="logo.jpeg" alt="logo JOSJIS STORE" class="logo-img">
+        JOSJIS<span>SHOP.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#produk">Produk</a>
+      </div>
+
+      <button class="cart-button" onclick="goToCart()">
+        🛒 Keranjang <span id="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div>
+        <div class="eyebrow">
+          <span class="dot"></span>
+          BASRENG THE BEST
+        </div>
+
+        <h1>
+          BEST SELLERS<br>
+        </h1>
+
+        <p>
+          Temukan basreng pilihan dengan rasa renyah,
+          gurih, pedas dan harga yang bersahabat.
+          Pesan langsung lewat WhatsApp, simpel dan praktis.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#produk" class="btn btn-primary">
+            Belanja Sekarang ↗
+          </a>
+
+          
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="pedas.jpg"
+          alt="Basreng pilihan JOSJIS STORE"
+        >
+        <div class="floating-tag">
+          ⚡ EVERYONE'S FAVORITE <span>— JOSJIS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits container" id="keunggulan">
+      <div class="benefit">
+        <div class="benefit-icon">⚡</div>
+        <div>
+          <strong>ORDER PRAKTIS</strong>
+          <small>Pesan langsung via WhatsApp</small>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">💎</div>
+        <div>
+          <strong>BASRENG PILIHAN</strong>
+          <small>cemilan gurih setiap hari</small>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🤝</div>
+        <div>
+          <strong>LAYANAN PERSONAL</strong>
+          <small>Diskusi pesanan dengan admin</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="produk">
+      <div class="section-heading">
+        <div>
+          <div class="category">OUR COLLECTION</div>
+          <h2>basreng <span>Unggulan.</span></h2>
+          <p>Dua pilihan spesial buat melengkapi rasa mulutmu.</p>
+        </div>
+
+        <div class="product-count">02 PRODUCTS</div>
+      </div>
+
+      <div class="products">
+
+        <!-- PRODUK 1 -->
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge">BEST SELLER</span>
+            <span class="product-number">01 / 02</span>
+
+            <img
+              src="asin.jpg"
+              alt="basreng asin 50gr"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+            <div class="category">SALTY SAVORY</div>
+            <h3>JOSJIS - BASRENG ASIN</h3>
+
+            <p class="description">
+              basreng dengan varian rasa asin yang lezat,
+              renyah,gurih dan membuat semua orang ketagihan 
+              untuk mencobanya lagi dan lagi
+              .
+            </p>
+
+            <div class="product-bottom">
+              <div class="price">
+                Rp7.000
+                <small>Harga per pcs</small>
+              </div>
+
+              <button class="add-button" onclick="addToCart(1)">
+                + Tambah
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUK 2 -->
+        <article class="product-card">
+          <div class="product-image">
+            <span class="product-badge">HOT ITEM</span>
+            <span class="product-number">02 / 02</span>
+
+            <img
+              src="pedas.jpg"
+              alt="basreng pedas 50gr"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+            <div class="category">SPICY AND SAVORY</div>
+            <h3>JOSJIS - BASRENG PEDAS</h3>
+
+            <p class="description">
+              basreng dengan varian rasa pedas yang lezat,
+              renyah,gurih dan membuat semua orang ketagihan 
+              untuk mencobanya lagi dan lagi
+              .
+            </p>
+
+            <div class="product-bottom">
+              <div class="price">
+                Rp7.000
+                <small>Harga per pcs</small>
+              </div>
+
+              <button class="add-button" onclick="addToCart(2)">
+                + Tambah
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- KERANJANG -->
+    <section class="container" id="keranjang">
+      <div class="cart-section">
+        <h2>🛒 Keranjang Belanja</h2>
+        <p>Periksa pesananmu sebelum melanjutkan ke WhatsApp.</p>
+
+        <div class="cart-items" id="cart-items">
+          <div class="empty-cart">
+            Keranjang masih kosong. Yuk, pilih produk basreng favoritmu!
+          </div>
+        </div>
+
+        <div class="cart-total">
+          <span>Total pesanan</span>
+          <strong id="cart-total">Rp0</strong>
+        </div>
+
+        <button
+          class="checkout"
+          id="checkout-button"
+          onclick="checkoutWhatsApp()"
+          disabled
+        >
+          ☎ PESAN SEKARANG VIA WHATSAPP
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="#" class="logo">
+        <img src="logo.jpeg" alt="logo JOSJIS" class="logo-img">
+        JOSJIS<span>SHOPE.</span>
+      </a>
+
+      <p>© <span id="year"></span> <strong>JOSJIS SHOPE</strong> — Own Your snacks.</p>
+      <p>Made with ⚡ for your next favorite food.</p>
+    </div>
+  </footer>
+
+  <!-- Tombol WhatsApp mengambang -->
+  <a
+    class="wa-float"
+    href="#keranjang"
+    aria-label="Buka keranjang dan pesan via WhatsApp"
+    title="Pesan via WhatsApp"
+  >☎</a>
+
+  <div class="toast" id="toast">Produk ditambahkan!</div>
+
+ 
+</body>
+</html>
